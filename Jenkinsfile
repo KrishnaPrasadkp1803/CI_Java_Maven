@@ -40,7 +40,7 @@ pipeline {
                     steps {
                         withSonarQubeEnv('sonarqube') {
                             sh '''
-                                mvn sonar:sonar \
+                                mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.10.0.2594:sonar \
                                 -Dsonar.projectKey=CI_Java_Maven \
                                 -Dsonar.projectName=CI_Java_Maven
                             '''
